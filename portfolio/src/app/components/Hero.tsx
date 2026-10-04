@@ -17,16 +17,6 @@ export default function Hero() {
           <a href="#projects" className="button primary">
             View My Projects
           </a>
-
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button secondary"
-          >
-            View Resume
-          </a>
-
           <a
             href="https://github.com/riyav-star"
             target="_blank"
