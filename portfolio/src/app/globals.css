@@ -81,7 +81,6 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================
    Main Layout
 ========================= */
@@ -112,7 +111,6 @@ a {
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
-
 
 /* =========================
    Hero
@@ -200,7 +198,6 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================
    About
 ========================= */
@@ -235,7 +232,6 @@ a {
 .about-text p + p {
   margin-top: 18px;
 }
-
 
 /* =========================
    Projects
@@ -309,7 +305,6 @@ a {
   color: var(--accent);
 }
 
-
 /* =========================
    Experience
 ========================= */
@@ -321,12 +316,16 @@ a {
 }
 
 .experience-item {
-  padding: 30px 0;
+  padding: 32px 0;
   border-bottom: 1px solid var(--border);
 }
 
 .experience-item:first-child {
   padding-top: 0;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
 }
 
 .experience-header {
@@ -356,10 +355,12 @@ a {
   margin: 3px 0 0;
 }
 
+/* Experience Bullet Points */
+
 .experience-description {
   margin: 20px 0 0;
   padding-left: 20px;
-  max-width: 850px;
+  max-width: 900px;
 }
 
 .experience-description li {
@@ -367,42 +368,56 @@ a {
   line-height: 1.7;
   font-size: 15px;
   margin-bottom: 10px;
-  padding-left: 4px;
+  padding-left: 5px;
+}
+
+.experience-description li:last-child {
+  margin-bottom: 0;
 }
 
 .experience-description li::marker {
   color: var(--accent);
 }
 
+/* Experience Skills */
+
 .experience-skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 24px;
 }
 
 .experience-skills span {
-  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
   border: 1px solid var(--border);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: 7px;
+
+  background: var(--surface);
   color: #c9c9d6;
+
   font-size: 12px;
   font-weight: 500;
+  line-height: 1;
+
   transition:
+    transform 0.2s ease,
     border-color 0.2s ease,
     background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    color 0.2s ease;
 }
 
 .experience-skills span:hover {
   transform: translateY(-2px);
-  border-color: rgba(var(--accent-rgb), 0.5);
-  background: rgba(var(--accent-rgb), 0.06);
+  border-color: rgba(var(--accent-rgb), 0.6);
+  background: rgba(var(--accent-rgb), 0.08);
   color: var(--foreground);
 }
-
 
 /* =========================
    Skills
@@ -449,11 +464,13 @@ a {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.025);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
+
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -478,7 +495,6 @@ a {
   font-weight: 500;
   text-align: center;
 }
-
 
 /* =========================
    Contact
@@ -513,7 +529,6 @@ a {
   color: var(--accent);
 }
 
-
 /* =========================
    Footer
 ========================= */
@@ -526,9 +541,8 @@ a {
   text-align: center;
 }
 
-
 /* =========================
-   Mobile
+   Responsive
 ========================= */
 
 @media (max-width: 900px) {
@@ -598,7 +612,7 @@ a {
   }
 
   .experience-skills {
-    margin-top: 18px;
+    margin-top: 20px;
   }
 
   .skill-list {
@@ -646,7 +660,7 @@ a {
   }
 
   .experience-item {
-    padding: 25px 0;
+    padding: 28px 0;
   }
 
   .experience-header h3 {
@@ -662,9 +676,13 @@ a {
     line-height: 1.6;
   }
 
+  .experience-skills {
+    gap: 8px;
+  }
+
   .experience-skills span {
     font-size: 11px;
-    padding: 5px 8px;
+    padding: 7px 9px;
   }
 
   .skill-list {
