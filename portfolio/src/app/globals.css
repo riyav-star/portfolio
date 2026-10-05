@@ -532,8 +532,11 @@ a {
   display: flex;
 
   align-items: center;
+  justify-content: center;
 
   padding: 100px 32px;
+
+  text-align: center;
 }
 
 .hero-container {
@@ -542,6 +545,14 @@ a {
   width: 100%;
 
   margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
 
   animation:
     heroEnter 0.9s ease-out both;
@@ -558,12 +569,17 @@ a {
 
   margin-bottom: 22px;
 
+  text-align: center;
+
   animation:
     fadeUp 0.7s ease-out 0.1s both;
 }
 
 .hero h1 {
   max-width: 900px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   font-size: clamp(48px, 8vw, 88px);
 
@@ -572,6 +588,8 @@ a {
   letter-spacing: -0.055em;
 
   font-weight: 700;
+
+  text-align: center;
 
   animation:
     fadeUp 0.7s ease-out 0.2s both;
@@ -589,11 +607,16 @@ a {
 
   margin-top: 28px;
 
+  margin-left: auto;
+  margin-right: auto;
+
   color: var(--muted);
 
   font-size: 18px;
 
   line-height: 1.7;
+
+  text-align: center;
 
   animation:
     fadeUp 0.7s ease-out 0.35s both;
@@ -601,6 +624,9 @@ a {
 
 .hero-buttons {
   display: flex;
+
+  justify-content: center;
+  align-items: center;
 
   gap: 14px;
 
@@ -610,6 +636,13 @@ a {
     fadeUp 0.7s ease-out 0.5s both;
 }
 
+/* Center profile photo inside hero */
+.hero .profile-photo {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* =========================================================
    HERO ANIMATIONS
