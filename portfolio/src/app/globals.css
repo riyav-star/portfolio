@@ -42,7 +42,9 @@ a {
   text-decoration: none;
 }
 
-/* Navigation */
+/* ================================
+   Navigation
+================================ */
 
 .navbar {
   position: sticky;
@@ -93,7 +95,9 @@ a {
   cursor: pointer;
 }
 
-/* Hero */
+/* ================================
+   Hero
+================================ */
 
 .hero {
   min-height: 85vh;
@@ -142,7 +146,9 @@ a {
   margin-top: 36px;
 }
 
-/* Buttons */
+/* ================================
+   Buttons
+================================ */
 
 .button {
   display: inline-block;
@@ -174,7 +180,9 @@ a {
   border-color: rgba(var(--accent-rgb), 0.5);
 }
 
-/* Sections */
+/* ================================
+   Sections
+================================ */
 
 .section {
   padding: 110px 24px;
@@ -196,7 +204,9 @@ a {
   letter-spacing: -0.03em;
 }
 
-/* About */
+/* ================================
+   About
+================================ */
 
 .about-content {
   max-width: 760px;
@@ -209,7 +219,9 @@ a {
   margin-bottom: 18px;
 }
 
-/* Projects */
+/* ================================
+   Projects
+================================ */
 
 .projects-grid {
   display: grid;
@@ -252,16 +264,14 @@ a {
 
 /* Project Technologies */
 
-.tech-list,
-.skill-list {
+.tech-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 24px;
 }
 
-.tech-list span,
-.skill-list span {
+.tech-list span {
   padding: 6px 10px;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -305,7 +315,9 @@ a {
   margin-top: 40px;
 }
 
-/* Experience */
+/* ================================
+   Experience
+================================ */
 
 .experience-list {
   margin-top: 45px;
@@ -343,7 +355,9 @@ a {
   color: var(--muted);
 }
 
-/* Skills */
+/* ================================
+   Skills
+================================ */
 
 .skills-grid {
   display: grid;
@@ -352,15 +366,73 @@ a {
   margin-top: 45px;
 }
 
+.skill-group {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.skill-group:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--accent-rgb), 0.4);
+  box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.08);
+}
+
 .skill-group h3 {
   font-size: 18px;
+  margin-bottom: 22px;
 }
 
-.skill-group .skill-list {
-  margin-top: 15px;
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
-/* Contact */
+.skill-item {
+  min-height: 88px;
+  padding: 14px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--accent-rgb), 0.5);
+  background: rgba(var(--accent-rgb), 0.06);
+}
+
+.skill-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.skill-item span {
+  color: #c9c9d6;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ================================
+   Contact
+================================ */
 
 .contact-section {
   text-align: center;
@@ -392,7 +464,9 @@ a {
   text-decoration: underline;
 }
 
-/* Profile Photo */
+/* ================================
+   Profile Photo
+================================ */
 
 .profile-photo {
   width: 160px;
@@ -405,7 +479,9 @@ a {
   box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.3);
 }
 
-/* Mobile */
+/* ================================
+   Mobile
+================================ */
 
 @media (max-width: 768px) {
   .menu-button {
@@ -443,6 +519,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .skill-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .hero {
     min-height: 75vh;
     padding: 80px 24px;
@@ -465,5 +545,19 @@ a {
 
   .project-links {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .nav-container {
+    padding: 16px 20px;
   }
 }
