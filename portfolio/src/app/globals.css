@@ -410,3 +410,13 @@ a {
     gap: 15px;
   }
 }
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(var(--accent-rgb), 0.6);
+  box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.3);
+}
