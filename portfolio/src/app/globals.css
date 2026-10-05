@@ -81,7 +81,6 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================
    Main Layout
 ========================= */
@@ -113,7 +112,6 @@ a {
   letter-spacing: -0.03em;
 }
 
-
 /* =========================
    Hero
 ========================= */
@@ -122,13 +120,19 @@ a {
   min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
-  padding: 100px 32px;
+  justify-content: center;
+  padding: 80px 32px 100px;
+  text-align: center;
 }
 
 .hero-container {
-  max-width: 1100px;
+  max-width: 950px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-eyebrow {
@@ -141,6 +145,7 @@ a {
 
 .hero h1 {
   max-width: 900px;
+  margin: 0 auto;
   font-size: clamp(48px, 8vw, 88px);
   line-height: 0.98;
   letter-spacing: -0.055em;
@@ -153,7 +158,7 @@ a {
 
 .hero-description {
   max-width: 680px;
-  margin-top: 28px;
+  margin: 28px auto 0;
   color: var(--muted);
   font-size: 18px;
   line-height: 1.7;
@@ -161,6 +166,8 @@ a {
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 14px;
   margin-top: 34px;
 }
@@ -200,7 +207,6 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================
    About
 ========================= */
@@ -216,6 +222,8 @@ a {
 .about-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  transform: translateY(25px);
 }
 
 .profile-photo {
@@ -235,7 +243,6 @@ a {
 .about-text p + p {
   margin-top: 18px;
 }
-
 
 /* =========================
    Projects
@@ -308,7 +315,6 @@ a {
 .project-links a:hover {
   color: var(--accent);
 }
-
 
 /* =========================
    Experience
@@ -403,7 +409,6 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================
    Skills
 ========================= */
@@ -479,7 +484,6 @@ a {
   text-align: center;
 }
 
-
 /* =========================
    Contact
 ========================= */
@@ -513,7 +517,6 @@ a {
   color: var(--accent);
 }
 
-
 /* =========================
    Footer
 ========================= */
@@ -526,9 +529,8 @@ a {
   text-align: center;
 }
 
-
 /* =========================
-   Mobile
+   Tablet
 ========================= */
 
 @media (max-width: 900px) {
@@ -538,13 +540,18 @@ a {
   }
 
   .about-image {
-    justify-content: flex-start;
+    justify-content: center;
+    transform: translateY(20px);
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width: 768px) {
   .nav-container {
@@ -566,6 +573,11 @@ a {
   .hero {
     min-height: auto;
     padding: 90px 24px;
+    text-align: center;
+  }
+
+  .hero-container {
+    align-items: center;
   }
 
   .hero h1 {
@@ -574,10 +586,13 @@ a {
 
   .hero-description {
     font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-buttons {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .projects-grid {
@@ -605,6 +620,10 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* =========================
+   Small Mobile
+========================= */
 
 @media (max-width: 480px) {
   .nav-container {
@@ -634,6 +653,8 @@ a {
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    max-width: 320px;
   }
 
   .button {
@@ -643,6 +664,10 @@ a {
   .profile-photo {
     width: 210px;
     height: 210px;
+  }
+
+  .about-image {
+    transform: translateY(15px);
   }
 
   .experience-item {
