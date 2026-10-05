@@ -1,7 +1,18 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
+        <Image
+          src="/riya.jpg"
+          alt="Riya Venkat"
+          width={160}
+          height={160}
+          className="profile-photo"
+          priority
+        />
+
         <p className="eyebrow">COMPUTER SCIENCE • AI/ML • SOFTWARE ENGINEERING</p>
 
         <h1>
