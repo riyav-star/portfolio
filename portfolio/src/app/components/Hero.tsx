@@ -16,7 +16,7 @@ export default function Hero() {
         <p className="eyebrow">COMPUTER SCIENCE • AI/ML • SOFTWARE ENGINEERING</p>
 
         <h1>
-          Hi, I'm <span>Riya Venkat.</span>
+          Hi, I'm <span>Riya Venkat</span>
         </h1>
 
         <p className="hero-description">
