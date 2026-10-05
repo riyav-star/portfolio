@@ -702,3 +702,499 @@ a {
     gap: 12px;
   }
 }
+
+/* =========================================================
+   THEME + COLOR SYSTEM
+========================================================= */
+
+/* Default: Dark + Purple */
+:root {
+  --background: #0a0a0f;
+  --foreground: #f1f1f5;
+  --muted: #9a9aae;
+  --border: #23232f;
+  --surface: #12121a;
+  --surface-hover: #181822;
+
+  --accent: #8b6cff;
+  --accent-rgb: 139, 108, 255;
+
+  --nav-background: rgba(10, 10, 15, 0.9);
+}
+
+
+/* =========================
+   Light Mode
+========================= */
+
+[data-theme="light"] {
+  --background: #f7f7fb;
+  --foreground: #17171f;
+  --muted: #686879;
+  --border: #dedee8;
+  --surface: #ffffff;
+  --surface-hover: #f1f1f7;
+
+  --nav-background: rgba(247, 247, 251, 0.9);
+}
+
+
+/* =========================
+   Blue Theme
+========================= */
+
+[data-accent="blue"] {
+  --accent: #5b8cff;
+  --accent-rgb: 91, 140, 255;
+}
+
+
+/* =========================
+   Green Theme
+========================= */
+
+[data-accent="green"] {
+  --accent: #4ade80;
+  --accent-rgb: 74, 222, 128;
+}
+
+
+/* =========================
+   Pink Theme
+========================= */
+
+[data-accent="pink"] {
+  --accent: #f472b6;
+  --accent-rgb: 244, 114, 182;
+}
+
+
+/* =========================
+   Orange Theme
+========================= */
+
+[data-accent="orange"] {
+  --accent: #fb923c;
+  --accent-rgb: 251, 146, 60;
+}
+
+
+/* =========================================================
+   SMOOTH THEME TRANSITIONS
+========================================================= */
+
+body,
+.navbar,
+.section-alt,
+.project-card,
+.skill-group,
+.skill-item,
+.experience-skills span,
+.button,
+.theme-toggle,
+.profile-photo {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   THEME TOGGLE BUTTON
+========================================================= */
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--surface);
+  color: var(--foreground);
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.08);
+
+  border-color: rgba(var(--accent-rgb), 0.6);
+
+  box-shadow:
+    0 0 0 4px rgba(var(--accent-rgb), 0.08);
+}
+
+
+/* =========================================================
+   COLOR PICKER
+========================================================= */
+
+.color-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-button {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  border: 2px solid transparent;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.color-button:hover {
+  transform: scale(1.2);
+}
+
+.color-button.active {
+  border-color: var(--foreground);
+  transform: scale(1.15);
+}
+
+.color-purple {
+  background: #8b6cff;
+}
+
+.color-blue {
+  background: #5b8cff;
+}
+
+.color-green {
+  background: #4ade80;
+}
+
+.color-pink {
+  background: #f472b6;
+}
+
+.color-orange {
+  background: #fb923c;
+}
+
+
+/* =========================================================
+   HERO ANIMATIONS
+========================================================= */
+
+.hero-container {
+  animation: heroEnter 0.9s ease-out both;
+}
+
+.hero-eyebrow {
+  animation: fadeUp 0.7s ease-out 0.1s both;
+}
+
+.hero h1 {
+  animation: fadeUp 0.7s ease-out 0.2s both;
+}
+
+.hero-description {
+  animation: fadeUp 0.7s ease-out 0.35s both;
+}
+
+.hero-buttons {
+  animation: fadeUp 0.7s ease-out 0.5s both;
+}
+
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   PROFILE PICTURE ANIMATION
+========================================================= */
+
+.profile-photo {
+  animation: profileEnter 0.9s ease-out 0.15s both;
+
+  /* Moves the photo crop upward */
+  object-position: center 35%;
+}
+
+.profile-photo:hover {
+  transform: scale(1.04);
+
+  border-color: rgba(var(--accent-rgb), 0.65);
+
+  box-shadow:
+    0 12px 35px rgba(var(--accent-rgb), 0.18);
+}
+
+
+@keyframes profileEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   BUTTON ANIMATIONS
+========================================================= */
+
+.button {
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-primary:hover {
+  box-shadow:
+    0 10px 25px rgba(var(--accent-rgb), 0.25);
+}
+
+
+/* =========================================================
+   PROJECT CARD ANIMATIONS
+========================================================= */
+
+.project-card {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.35s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(var(--accent-rgb), 0.5);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   SKILL GROUP ANIMATIONS
+========================================================= */
+
+.skill-group {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.35s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-group:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(var(--accent-rgb), 0.45);
+
+  box-shadow:
+    0 12px 30px rgba(var(--accent-rgb), 0.1);
+}
+
+
+/* =========================================================
+   INDIVIDUAL SKILL ANIMATION
+========================================================= */
+
+.skill-item {
+  transition:
+    transform 0.2s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px) scale(1.02);
+
+  border-color:
+    rgba(var(--accent-rgb), 0.5);
+
+  background:
+    rgba(var(--accent-rgb), 0.06);
+}
+
+
+/* =========================================================
+   EXPERIENCE SKILL TAGS
+========================================================= */
+
+.experience-skills span {
+  transition:
+    transform 0.2s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.experience-skills span:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(var(--accent-rgb), 0.5);
+
+  background:
+    rgba(var(--accent-rgb), 0.06);
+
+  color: var(--foreground);
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   REVEAL DELAYS
+========================================================= */
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   LIGHT MODE DETAILS
+========================================================= */
+
+[data-theme="light"] .project-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .skill-group {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .navbar {
+  background: var(--nav-background);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .color-switcher {
+    gap: 6px;
+  }
+
+  .color-button {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .profile-photo:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
