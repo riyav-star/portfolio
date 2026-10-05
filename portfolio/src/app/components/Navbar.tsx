@@ -60,18 +60,18 @@ export default function Navbar() {
      Change Accent Color
   ========================= */
 
-  const changeAccent = (newAccent) => {
-    setAccent(newAccent);
+  const changeAccent = (newAccent: string) => {
+  setAccent(newAccent);
 
-    document.documentElement.setAttribute(
-      "data-accent",
-      newAccent
-    );
+  document.documentElement.setAttribute(
+    "data-accent",
+    newAccent
+  );
 
-    localStorage.setItem("accent", newAccent);
+  localStorage.setItem("accent", newAccent);
 
-    setColorOpen(false);
-  };
+  setColorOpen(false);
+};
 
   /* =========================
      Close mobile menu
