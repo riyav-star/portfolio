@@ -1,35 +1,96 @@
 const skillGroups = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "C++", "C", "SQL", "R"],
-  },
-  {
-    title: "Frameworks & Tools",
     skills: [
-      "React",
-      "FastAPI",
-      "PostgreSQL",
-      "Git",
-      "GitHub",
-      "Linux",
+      {
+        name: "Python",
+        icon: "https://cdn.simpleicons.org/python",
+      },
+      {
+        name: "Java",
+        icon: "https://cdn.simpleicons.org/openjdk",
+      },
+      {
+        name: "C++",
+        icon: "https://cdn.simpleicons.org/cplusplus",
+      },
+      {
+        name: "C",
+        icon: "https://cdn.simpleicons.org/c",
+      },
+      {
+        name: "SQL",
+        icon: "https://cdn.simpleicons.org/mysql",
+      },
+      {
+        name: "R",
+        icon: "https://cdn.simpleicons.org/r",
+      },
     ],
   },
   {
-    title: "AI & Machine Learning",
+    title: "Frontend & Backend",
     skills: [
-      "Scikit-learn",
-      "LangChain",
-      "LangGraph",
-      "LLM APIs",
-      "RAG",
-      "AI Agents",
+      {
+        name: "React",
+        icon: "https://cdn.simpleicons.org/react",
+      },
+      {
+        name: "Next.js",
+        icon: "https://cdn.simpleicons.org/nextdotjs",
+      },
+      {
+        name: "FastAPI",
+        icon: "https://cdn.simpleicons.org/fastapi",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "https://cdn.simpleicons.org/postgresql",
+      },
+      {
+        name: "HTML",
+        icon: "https://cdn.simpleicons.org/html5",
+      },
+      {
+        name: "CSS",
+        icon: "https://cdn.simpleicons.org/css",
+      },
+    ],
+  },
+  {
+    title: "AI & Data",
+    skills: [
+      {
+        name: "Scikit-learn",
+        icon: "https://cdn.simpleicons.org/scikitlearn",
+      },
+      {
+        name: "Pandas",
+        icon: "https://cdn.simpleicons.org/pandas",
+      },
+      {
+        name: "OpenAI",
+        icon: "https://cdn.simpleicons.org/openai",
+      },
+      {
+        name: "LangChain",
+        icon: "https://cdn.simpleicons.org/langchain",
+      },
+      {
+        name: "LangGraph",
+        icon: "https://cdn.simpleicons.org/langgraph",
+      },
+      {
+        name: "Git",
+        icon: "https://cdn.simpleicons.org/git",
+      },
     ],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="section section-alt">
+    <section id="skills" className="section">
       <div className="section-container">
         <p className="section-label">SKILLS</p>
 
@@ -42,7 +103,14 @@ export default function Skills() {
 
               <div className="skill-list">
                 {group.skills.map((skill) => (
-                  <span key={skill}>{skill}</span>
+                  <div className="skill-item" key={skill.name}>
+                    <img
+                      src={skill.icon}
+                      alt={`${skill.name} logo`}
+                      className="skill-icon"
+                    />
+                    <span>{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
