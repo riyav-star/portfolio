@@ -439,7 +439,6 @@ a {
     rgba(var(--accent-rgb), 0.08);
 }
 
-
 /* =========================================================
    MOBILE MENU BUTTON
 ========================================================= */
@@ -454,21 +453,22 @@ a {
   justify-content: center;
 
   border: 1px solid var(--border);
-
   border-radius: 7px;
 
   background: var(--surface);
-
   color: var(--foreground);
 
   cursor: pointer;
 
   font-size: 18px;
+  font-weight: 500;
 
   transition:
     transform 0.2s ease,
     border-color 0.25s ease,
-    background-color 0.35s ease;
+    background-color 0.35s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .menu-button:hover {
@@ -476,6 +476,25 @@ a {
 
   border-color:
     rgba(var(--accent-rgb), 0.5);
+
+  background:
+    rgba(var(--accent-rgb), 0.08);
+
+  color: var(--accent);
+
+  box-shadow:
+    0 4px 14px
+    rgba(var(--accent-rgb), 0.12);
+}
+
+.menu-button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: flex;
+  }
 }
 
 
@@ -1117,112 +1136,71 @@ a {
 
 .skills-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 30px;
-
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
   margin-top: 45px;
 }
 
 .skill-group {
   padding: 26px;
-
   border: 1px solid var(--border);
-
   border-radius: 12px;
-
   background: var(--surface);
-
   transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    background-color 0.35s ease,
-    box-shadow 0.3s ease;
-}
-
-.skill-group:hover {
-  transform: translateY(-5px);
-
-  border-color:
-    rgba(var(--accent-rgb), 0.4);
-
-  box-shadow:
-    0 12px 30px
-    rgba(var(--accent-rgb), 0.1);
-}
-
-.skill-group h3 {
-  font-size: 18px;
-
-  margin-bottom: 22px;
-}
-
-.skill-list {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
-  gap: 12px;
-}
-
-.skill-item {
-  min-height: 88px;
-
-  padding: 14px 10px;
-
-  border: 1px solid var(--border);
-
-  border-radius: 8px;
-
-  background:
-    rgba(255, 255, 255, 0.025);
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 8px;
-
-  transition:
-    transform 0.2s ease,
+    transform 0.25s ease,
     border-color 0.25s ease,
     background-color 0.25s ease;
 }
 
+.skill-group:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--accent-rgb), 0.5);
+  background: var(--surface-hover);
+}
+
+.skill-group h3 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(var(--accent-rgb), 0.5);
+  border-radius: 7px;
+
+  background: rgba(var(--accent-rgb), 0.14);
+
+  color: var(--accent);
+
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
 .skill-item:hover {
-  transform:
-    translateY(-4px)
-    scale(1.02);
-
-  border-color:
-    rgba(var(--accent-rgb), 0.5);
-
-  background:
-    rgba(var(--accent-rgb), 0.06);
-}
-
-.skill-icon {
-  width: 30px;
-  height: 30px;
-
-  object-fit: contain;
-}
-
-.skill-item span {
-  color: #c9c9d6;
-
-  font-size: 13px;
-
-  font-weight: 500;
-
-  text-align: center;
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.25);
+  box-shadow:
+    0 5px 18px rgba(var(--accent-rgb), 0.2);
 }
 
 
