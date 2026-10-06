@@ -106,6 +106,7 @@ a {
 .skill-group,
 .skill-item,
 .experience-skills span,
+.tech-list span,
 .button,
 .theme-toggle,
 .color-picker-button,
@@ -636,13 +637,13 @@ a {
     fadeUp 0.7s ease-out 0.5s both;
 }
 
-/* Center profile photo inside hero */
 .hero .profile-photo {
   display: block;
 
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* =========================================================
    HERO ANIMATIONS
@@ -764,10 +765,6 @@ a {
 
   object-fit: cover;
 
-  /*
-    Moves your head/photo upward
-    inside the circular crop.
-  */
   object-position: center 35%;
 
   border-radius: 50%;
@@ -885,7 +882,12 @@ a {
   line-height: 1.7;
 }
 
-.project-tech {
+
+/* =========================================================
+   PROJECT TECHNOLOGY TAGS
+========================================================= */
+
+.tech-list {
   display: flex;
 
   flex-wrap: wrap;
@@ -895,21 +897,21 @@ a {
   margin-top: 20px;
 }
 
-.project-tech span {
+.tech-list span {
   display: inline-flex;
 
   align-items: center;
   justify-content: center;
 
-  padding: 6px 11px;
+  padding: 7px 12px;
 
   border: 1px solid
-    rgba(var(--accent-rgb), 0.45);
+    rgba(var(--accent-rgb), 0.55);
 
   border-radius: 7px;
 
   background:
-    rgba(var(--accent-rgb), 0.12);
+    rgba(var(--accent-rgb), 0.16);
 
   color: var(--accent);
 
@@ -927,20 +929,25 @@ a {
     color 0.25s ease;
 }
 
-.project-tech span:hover {
+.tech-list span:hover {
   transform: translateY(-3px);
 
   border-color: var(--accent);
 
   background:
-    rgba(var(--accent-rgb), 0.2);
+    rgba(var(--accent-rgb), 0.27);
 
   color: var(--accent);
 
   box-shadow:
     0 5px 18px
-    rgba(var(--accent-rgb), 0.18);
+    rgba(var(--accent-rgb), 0.22);
 }
+
+
+/* =========================================================
+   PROJECT LINKS
+========================================================= */
 
 .project-links {
   display: flex;
@@ -1324,7 +1331,7 @@ a {
    LIGHT MODE
 ========================================================= */
 
-[data-theme="light"] .project-tech span,
+[data-theme="light"] .tech-list span,
 [data-theme="light"] .experience-skills span,
 [data-theme="light"] .skill-item {
   background:
@@ -1603,4 +1610,3 @@ a {
     scroll-behavior: auto !important;
   }
 }
-
