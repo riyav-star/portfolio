@@ -4,19 +4,42 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="navbar-container">
-        <a href="#home" className="navbar-logo" onClick={closeMenu}>
+        {/* Logo */}
+        <a
+          href="#home"
+          className="navbar-logo"
+          onClick={closeMenu}
+          aria-label="Go to home"
+        >
           RV
         </a>
 
-        <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        {/* Desktop / Mobile Navigation */}
+        <nav
+          className={`navbar-links ${menuOpen ? "open" : ""}`}
+          aria-label="Main navigation"
+        >
           <a href="#about" onClick={closeMenu}>
             About
           </a>
@@ -42,10 +65,13 @@ export default function Navbar() {
           </a>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
-          className="menu-button"
           type="button"
-          aria-label="Toggle navigation menu"
+          className="menu-button"
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
