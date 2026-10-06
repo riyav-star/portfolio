@@ -2,48 +2,132 @@ const skillGroups = [
   {
     title: "Languages",
     skills: [
-      "Python",
-      "Java",
-      "C++",
-      "C",
-      "SQL",
-      "R",
+      {
+        name: "Python",
+        icon: "https://cdn.simpleicons.org/python",
+      },
+      {
+        name: "Java",
+        icon: "https://cdn.simpleicons.org/openjdk",
+      },
+      {
+        name: "C++",
+        icon: "https://cdn.simpleicons.org/cplusplus",
+      },
+      {
+        name: "C",
+        icon: "https://cdn.simpleicons.org/c",
+      },
+      {
+        name: "SQL",
+        icon: "https://cdn.simpleicons.org/mysql",
+      },
+      {
+        name: "R",
+        icon: "https://cdn.simpleicons.org/r",
+      },
     ],
   },
+
   {
     title: "Frontend & Backend",
     skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "FastAPI",
-      "PostgreSQL",
-      "HTML",
-      "CSS",
+      {
+        name: "React",
+        icon: "https://cdn.simpleicons.org/react",
+      },
+      {
+        name: "Next.js",
+        icon: "https://cdn.simpleicons.org/nextdotjs",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.simpleicons.org/typescript",
+      },
+      {
+        name: "FastAPI",
+        icon: "https://cdn.simpleicons.org/fastapi",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "https://cdn.simpleicons.org/postgresql",
+      },
+      {
+        name: "HTML",
+        icon: "https://cdn.simpleicons.org/html5",
+      },
+      {
+        name: "CSS",
+        icon: "https://cdn.simpleicons.org/css",
+      },
     ],
   },
+
   {
     title: "AI & Data",
     skills: [
-      "Scikit-learn",
-      "Pandas",
-      "OpenAI",
-      "LangChain",
-      "LangGraph",
-      "LlamaIndex",
-      "Langfuse",
+      {
+        name: "Scikit-learn",
+        icon: "https://cdn.simpleicons.org/scikitlearn",
+      },
+      {
+        name: "Pandas",
+        icon: "https://cdn.simpleicons.org/pandas",
+      },
+      {
+        name: "OpenAI",
+        icon: "https://cdn.simpleicons.org/openai",
+      },
+      {
+        name: "LangChain",
+        icon: "https://cdn.simpleicons.org/langchain",
+      },
+      {
+        name: "LangGraph",
+        icon: "https://cdn.simpleicons.org/langgraph",
+      },
+      {
+        name: "LlamaIndex",
+        icon: "https://cdn.simpleicons.org/llamaindex",
+      },
+      {
+        name: "Langfuse",
+        icon: "https://cdn.simpleicons.org/langfuse",
+      },
     ],
   },
+
   {
     title: "Tools & Design",
     skills: [
-      "Git",
-      "GitHub",
-      "Figma",
-      "Linux",
-      "Vercel",
-      "LaTeX",
-      "MATLAB",
+      {
+        name: "Git",
+        icon: "https://cdn.simpleicons.org/git",
+      },
+      {
+        name: "GitHub",
+        icon: "https://cdn.simpleicons.org/github",
+      },
+      {
+        name: "Figma",
+        icon: "https://cdn.simpleicons.org/figma",
+      },
+      {
+        name: "Vercel",
+        icon: "https://cdn.simpleicons.org/vercel",
+      },
+      {
+        name: "Linux",
+        icon: "https://cdn.simpleicons.org/linux",
+      },
+      {
+        name: "LaTeX",
+        icon: "https://cdn.simpleicons.org/latex",
+      },
+      {
+        name: "MATLAB",
+        icon: "https://cdn.simpleicons.org/mathworks",
+      },
     ],
   },
 ];
@@ -63,9 +147,15 @@ export default function Skills() {
 
               <div className="skill-list">
                 {group.skills.map((skill) => (
-                  <span className="skill-item" key={skill}>
-                    {skill}
-                  </span>
+                  <div className="skill-item" key={skill.name}>
+                    <img
+                      src={skill.icon}
+                      alt={`${skill.name} logo`}
+                      loading="lazy"
+                    />
+
+                    <span>{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
