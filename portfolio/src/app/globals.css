@@ -1856,3 +1856,42 @@ body {
   }
 }
 
+/* Separate the top navigation links */
+nav {
+  gap: 1.5rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.6rem 0.8rem;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Keep navigation aligned and evenly spaced */
+nav ul,
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  nav ul,
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
