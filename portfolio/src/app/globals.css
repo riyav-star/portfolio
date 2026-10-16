@@ -1895,3 +1895,75 @@ nav ul,
   }
 }
 
+
+/* ===== NAVIGATION SPACING ===== */
+nav {
+  gap: 1.25rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.6rem 0.85rem;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+/* ===== DARK MODE NAVIGATION ===== */
+.dark nav a,
+[data-theme="dark"] nav a {
+  color: #e4e4f0;
+}
+
+.dark nav a:hover,
+[data-theme="dark"] nav a:hover {
+  color: var(--accent, #a78bfa);
+  background: rgba(167, 139, 250, 0.12);
+}
+
+/* ===== LIGHT MODE NAVIGATION ===== */
+.light nav a,
+[data-theme="light"] nav a {
+  color: #37304a;
+}
+
+.light nav a:hover,
+[data-theme="light"] nav a:hover {
+  color: var(--accent, #7c3aed);
+  background: rgba(124, 58, 237, 0.09);
+}
+
+/* ===== PROFILE PICTURE CIRCULAR BORDER ===== */
+.profile-photo {
+  border-radius: 50%;
+  border: 3px solid var(--accent, #a78bfa);
+  padding: 4px;
+  object-fit: cover;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle glow in dark mode */
+.dark .profile-photo,
+[data-theme="dark"] .profile-photo {
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.3);
+}
+
+/* Softer shadow in light mode */
+.light .profile-photo,
+[data-theme="light"] .profile-photo {
+  box-shadow: 0 3px 14px rgba(124, 58, 237, 0.16);
+}
+
+/* ===== RESPONSIVE NAVIGATION ===== */
+@media (max-width: 768px) {
+  nav {
+    gap: 0.35rem;
+  }
+
+  nav a {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.9rem;
+  }
+}
