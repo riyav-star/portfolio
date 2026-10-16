@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-content">
         <Image
-          src="/riya.jpg"
+          src="/pfp.jpg"
           alt="Riya Venkat"
           width={160}
           height={160}
