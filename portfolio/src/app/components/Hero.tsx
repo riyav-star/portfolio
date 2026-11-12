@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function Hero() {
@@ -13,7 +14,9 @@ export default function Hero() {
           priority
         />
 
-        <p className="eyebrow">COMPUTER SCIENCE • AI/ML • SOFTWARE ENGINEERING</p>
+        <p className="eyebrow">
+          COMPUTER SCIENCE • AI/ML • SOFTWARE ENGINEERING
+        </p>
 
         <h1>
           Hi, I'm <span>Riya Venkat</span>
@@ -24,10 +27,15 @@ export default function Hero() {
           data-driven tools with a focus on practical software engineering.
         </p>
 
+        <p className="hero-availability">
+          Seeking 2027 Software Engineering Opportunities
+        </p>
+
         <div className="hero-buttons">
           <a href="#projects" className="button primary">
             View My Projects
           </a>
+
           <a
             href="https://github.com/riyav-star"
             target="_blank"
@@ -41,3 +49,4 @@ export default function Hero() {
     </section>
   );
 }
+
