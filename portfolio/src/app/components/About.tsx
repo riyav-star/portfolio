@@ -4,29 +4,27 @@ export default function About() {
       <div className="section-container">
         <p className="section-label">ABOUT</p>
 
-        <h2>Curious about technology. Driven to build.</h2>
+        <h2>Building software with AI and data.</h2>
 
         <div className="about-content">
           <p>
             I'm a Computer Science student at Rutgers University–New
-            Brunswick, graduating in May 2027. I'm interested in software
-            engineering, AI, and building technology that solves practical
-            problems.
+            Brunswick with a minor in Data Science. During my internship
+            at Ephanti, I built a FastAPI support agent and used Langfuse
+            to monitor LLM workflows, including latency, token usage, and
+            failures.
           </p>
 
           <p>
-            I enjoy taking ideas from concept to working applications,
-            whether that's developing full-stack systems, experimenting with
-            machine learning, or building AI-powered tools. Through my
-            internships and personal projects, I've developed an interest in
-            backend development and exploring how AI can make software more
-            useful and accessible.
+            Outside of work, I build projects like Green Plants, an
+            ML-powered plant care application, and an AI DJ for a
+            vinyl-style music player. I enjoy turning ideas into working
+            applications and exploring how AI can make software more useful.
           </p>
 
           <p>
-            I'm always looking for opportunities to learn new technologies,
-            strengthen my problem-solving skills, and take on projects that
-            challenge me to grow as an engineer.
+            I'm seeking 2027 Software Engineering opportunities where I
+            can contribute, keep learning, and grow as an engineer.
           </p>
         </div>
       </div>
