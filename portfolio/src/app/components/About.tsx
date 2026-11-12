@@ -3,10 +3,34 @@ export default function About() {
     <section id="about" className="section">
       <div className="section-container">
         <p className="section-label">ABOUT</p>
+
         <h2>Building software with AI and data.</h2>
 
-        <div className="about-grid">
-          <div className="about-content">
+        <div className="about-content">
+          <div className="about-image">
+            <div className="about-facts">
+              <dl>
+                <div>
+                  <dt>School</dt>
+                  <dd>Rutgers University–New Brunswick</dd>
+                </div>
+                <div>
+                  <dt>Degree</dt>
+                  <dd>B.S. Computer Science, Data Science minor</dd>
+                </div>
+                <div>
+                  <dt>Graduating</dt>
+                  <dd>May 2027</dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>AI agents, full-stack, LLM observability</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div className="about-text">
             <p>
               I'm a Computer Science student at Rutgers University–New
               Brunswick with a minor in Data Science. During my internship
@@ -25,27 +49,6 @@ export default function About() {
               can contribute, keep learning, and grow as an engineer.
             </p>
           </div>
-
-          <aside className="about-facts">
-            <dl>
-              <div>
-                <dt>School</dt>
-                <dd>Rutgers University–New Brunswick</dd>
-              </div>
-              <div>
-                <dt>Degree</dt>
-                <dd>B.S. Computer Science, Data Science minor</dd>
-              </div>
-              <div>
-                <dt>Graduating</dt>
-                <dd>May 2027</dd>
-              </div>
-              <div>
-                <dt>Focus</dt>
-                <dd>AI agents, full-stack, LLM observability</dd>
-              </div>
-            </dl>
-          </aside>
         </div>
       </div>
     </section>
