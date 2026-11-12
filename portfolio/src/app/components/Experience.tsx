@@ -44,7 +44,6 @@ const experiences = [
     company: "Rutgers University Mobile App Development (RUMAD)",
     date: "Feb 2025 – May 2025",
     description: [
-      "Selected for a competitive 8-week Backend Accelerator focused on backend development and API design.",
       "Developed REST APIs using Node.js and Express to support frontend and backend communication, including routing, middleware, and asynchronous operations.",
       "Integrated Supabase for database operations, including CRUD functionality, relational tables, and user authentication.",
     ],
