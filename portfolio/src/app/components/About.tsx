@@ -4,8 +4,6 @@ export default function About() {
       <div className="section-container">
         <p className="section-label">ABOUT</p>
 
-        <h2>Building software with AI and data.</h2>
-
         <div className="about-content">
           <div className="about-text">
             <p>
