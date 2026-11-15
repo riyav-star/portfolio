@@ -773,27 +773,22 @@ a {
   color: var(--foreground);
 }
 
-
 /* =========================================================
    ABOUT
 ========================================================= */
 
+#about {
+  text-align: center;
+}
+
 .about-content {
   display: grid;
 
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr;
 
-  gap: 70px;
+  max-width: 720px;
 
-  margin-top: 45px;
-
-  align-items: center;
-}
-
-.about-image {
-  display: flex;
-
-  justify-content: center;
+  margin: 45px auto 0;
 }
 
 .profile-photo {
